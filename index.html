@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Molina Vitón | Ingeniería Informática</title>
+    <!-- Tailwind CSS para estilos modernos y responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .skill-badge {
+            background: rgba(56, 189, 248, 0.12);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: #38bdf8;
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-12">
+
+    <!-- Contenedor Principal (Optimizado para vista móvil al escanear NFC) -->
+    <div class="max-w-xl mx-auto px-4 pt-8 space-y-6">
+
+        <!-- Cabecera / Perfil -->
+        <header class="glass-card rounded-2xl p-6 text-center shadow-xl relative overflow-hidden">
+            <div class="w-24 h-24 rounded-full bg-gradient-to-tr from-sky-500 to-indigo-600 mx-auto flex items-center justify-center text-3xl font-bold shadow-lg mb-4 border-2 border-sky-300">
+                DM
+            </div>
+            <h1 class="text-2xl font-bold tracking-tight text-white">Daniel Molina Vitón</h1>
+            <p class="text-sky-400 font-medium text-sm mt-1">Estudiante de último año de Grado en Ingeniería Informática</p>
+            <p class="text-slate-400 text-xs mt-1"><i class="fa-solid fa-location-dot mr-1"></i>Majadahonda, Madrid</p>
+
+            <!-- Botones de Acción Rápida -->
+            <div class="grid grid-cols-3 gap-3 mt-6">
+                <a href="tel:+34680480716" class="flex flex-col items-center justify-center p-3 rounded-xl bg-slate-800 hover:bg-slate-700 transition border border-slate-700">
+                    <i class="fa-solid fa-phone text-sky-400 text-lg mb-1"></i>
+                    <span class="text-xs">Llamar</span>
+                </a>
+                <a href="mailto:danielmol2005@gmail.com" class="flex flex-col items-center justify-center p-3 rounded-xl bg-slate-800 hover:bg-slate-700 transition border border-slate-700">
+                    <i class="fa-solid fa-envelope text-sky-400 text-lg mb-1"></i>
+                    <span class="text-xs">Email</span>
+                </a>
+                <a href="https://github.com/dani84mol" target="_blank" class="flex flex-col items-center justify-center p-3 rounded-xl bg-slate-800 hover:bg-slate-700 transition border border-slate-700">
+                    <i class="fa-brands fa-github text-sky-400 text-lg mb-1"></i>
+                    <span class="text-xs">GitHub</span>
+                </a>
+            </div>
+
+            <!-- Botón Guardar Contacto (Ideal para NFC) -->
+            <button onclick="descargarVCard()" class="mt-4 w-full py-3 bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-white font-semibold rounded-xl shadow-lg flex items-center justify-center gap-2 transition">
+                <i class="fa-solid fa-user-plus"></i> Guardar en Contactos
+            </button>
+        </header>
+
+        <!-- Resumen Profesional -->
+        <section class="glass-card rounded-2xl p-6 shadow-lg">
+            <h2 class="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-user-astronaut text-sky-400"></i> Sobre mí
+            </h2>
+            <p class="text-slate-300 text-sm leading-relaxed">
+                Estudiante de último año de Ingeniería Informática con sólida experiencia práctica en desarrollo de software, despliegue de contenedores y tecnologías de Inteligencia Artificial. Perfil proactivo y analítico, con capacidad demostrada para desarrollar aplicaciones web completas, agentes de IA y participar en entornos de desarrollo colaborativo mediante control de versiones y metodologías ágiles.
+            </p>
+        </section>
+
+        <!-- Habilidades Técnicas -->
+        <section class="glass-card rounded-2xl p-6 shadow-lg space-y-4">
+            <h2 class="text-lg font-semibold text-white mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-code text-sky-400"></i> Habilidades Técnicas
+            </h2>
+
+            <div>
+                <h3 class="text-xs uppercase tracking-wider text-slate-400 mb-2">Lenguajes</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Python</span>
+                    <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Java</span>
+                    <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">JavaScript</span>
+                    <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Go</span>
+                    <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Bash</span>
+                    <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">SQL</span>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xs uppercase tracking-wider text-slate-400 mb-2">Inteligencia Artificial & Datos</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Ollama</span>
+                    <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Agentes de IA</span>
+                    <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Qdrant (Vector DB)</span>
+                    <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">PostgreSQL</span>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xs uppercase tracking-wider text-slate-400 mb-2">DevOps & Desarrollo Web</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Docker</span>
+                    <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Kubernetes</span>
+                    <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">Git & GitHub</span>
+                    <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">HTML5 / CSS3 / SCSS</span>
+                    <span class="skill-badge px-3 py-1 rounded-full text-xs font-medium">JSX</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiencia y Proyectos Destacados -->
+        <section class="glass-card rounded-2xl p-6 shadow-lg">
+            <h2 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-rocket text-sky-400"></i> Experiencia y Proyectos
+            </h2>
+            <div class="space-y-5 border-l-2 border-sky-500/40 pl-4">
+                
+                <div class="relative">
+                    <div class="w-3 h-3 bg-sky-400 rounded-full absolute -left-[23px] top-1.5"></div>
+                    <h3 class="font-semibold text-white text-sm">Implementación de IA y Agentes de IA</h3>
+                    <span class="text-xs text-sky-400">Proyectos Prácticos (Colmena)</span>
+                    <p class="text-slate-300 text-xs mt-1 leading-relaxed">
+                        Desarrollo e integración de agentes de IA y sistemas inteligentes utilizando bases de datos vectoriales y modelos locales para NLP y recuperación de información.
+                    </p>
+                </div>
+
+                <div class="relative">
+                    <div class="w-3 h-3 bg-sky-400 rounded-full absolute -left-[23px] top-1.5"></div>
+                    <h3 class="font-semibold text-white text-sm">Análisis Técnico de Proyecto para Empresa</h3>
+                    <span class="text-xs text-sky-400">Consultoría Académica / Profesional</span>
+                    <p class="text-slate-300 text-xs mt-1 leading-relaxed">
+                        Evaluación de arquitectura para software empresarial. Identificación de requisitos técnicos, optimización de flujos y propuestas orientadas a la escalabilidad.
+                    </p>
+                </div>
+
+                <div class="relative">
+                    <div class="w-3 h-3 bg-sky-400 rounded-full absolute -left-[23px] top-1.5"></div>
+                    <h3 class="font-semibold text-white text-sm">Desarrollo Web y Aplicaciones Full-Stack</h3>
+                    <span class="text-xs text-sky-400">Proyectos Personales y Académicos</span>
+                    <p class="text-slate-300 text-xs mt-1 leading-relaxed">
+                        Diseño y desarrollo de páginas web con arquitecturas modernas e interfaces de usuario responsivas y dinámicas.
+                    </p>
+                </div>
+
+                <div class="relative">
+                    <div class="w-3 h-3 bg-sky-400 rounded-full absolute -left-[23px] top-1.5"></div>
+                    <h3 class="font-semibold text-white text-sm">Participación en Hackathon</h3>
+                    <span class="text-xs text-sky-400">Competencia de Desarrollo</span>
+                    <p class="text-slate-300 text-xs mt-1 leading-relaxed">
+                        Desarrollo contrarreloj de soluciones tecnológicas funcionales en equipo, aplicando resolución rápida de problemas y programación ágil.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Formación e Idiomas -->
+        <section class="glass-card rounded-2xl p-6 shadow-lg space-y-4">
+            <h2 class="text-lg font-semibold text-white mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-graduation-cap text-sky-400"></i> Formación e Idiomas
+            </h2>
+            
+            <div class="space-y-3">
+                <div>
+                    <h3 class="text-sm font-semibold text-white">Grado en Ingeniería Informática</h3>
+                    <p class="text-xs text-slate-400">Universidad Camilo José Cela • 2022/2023 – 2026/2027 (Previsto)</p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-white">Bachillerato</h3>
+                    <p class="text-xs text-slate-400">Colegio Sagrado Corazón • Concluido en 2023</p>
+                </div>
+            </div>
+
+            <hr class="border-slate-700/60 my-3">
+
+            <div>
+                <h3 class="text-xs uppercase tracking-wider text-slate-400 mb-2">Idiomas</h3>
+                <p class="text-xs text-slate-300"><strong class="text-white">Español:</strong> Nativo</p>
+                <p class="text-xs text-slate-300 mt-1"><strong class="text-white">Inglés:</strong> Nivel B1 (Capacidad de lectura técnica y comunicación profesional)</p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Script para generar tarjeta de contacto vCard (.vcf) -->
+    <script>
+        function descargarVCard() {
+            const vcard = [
+                "BEGIN:VCARD",
+                "VERSION:3.0",
+                "N:Molina Vitón;Daniel;;;",
+                "FN:Daniel Molina Vitón",
+                "TITLE:Ingeniería Informática",
+                "TEL;TYPE=CELL:+34680480716",
+                "EMAIL:danielmol2005@gmail.com",
+                "URL:https://github.com/dani84mol",
+                "ADR;TYPE=HOME:;;Majadahonda;Madrid;;;España",
+                "END:VCARD"
+            ].join("\n");
+
+            const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "Daniel_Molina_Viton.vcf";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+</body>
+</html>
