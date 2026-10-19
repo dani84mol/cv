@@ -56,10 +56,17 @@
                 </a>
             </div>
 
-            <!-- Botón Guardar Contacto (Ideal para NFC) -->
-            <button onclick="descargarVCard()" class="mt-4 w-full py-3 bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-white font-semibold rounded-xl shadow-lg flex items-center justify-center gap-2 transition">
-                <i class="fa-solid fa-user-plus"></i> Guardar en Contactos
-            </button>
+            <!-- Botones Principales: Guardar Contacto y Descargar CV -->
+            <div class="space-y-3 mt-4">
+                <button onclick="descargarVCard()" class="w-full py-3 bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-white font-semibold rounded-xl shadow-lg flex items-center justify-center gap-2 transition">
+                    <i class="fa-solid fa-user-plus"></i> Guardar en Contactos
+                </button>
+
+                <!-- Botón para descargar el CV en PDF -->
+                <a href="CV_Daniel_Molina.pdf" download="Curriculum_Daniel_Molina_Viton.pdf" class="w-full py-3 bg-slate-800 hover:bg-slate-700 text-sky-400 border border-sky-500/40 font-semibold rounded-xl shadow-lg flex items-center justify-center gap-2 transition">
+                    <i class="fa-solid fa-file-pdf"></i> Descargar CV Completo (PDF)
+                </a>
+            </div>
         </header>
 
         <!-- Resumen Profesional -->
